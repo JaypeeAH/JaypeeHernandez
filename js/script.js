@@ -397,7 +397,11 @@ function initCarousels() {
                 if (currentIndex < cards.length - 1) {
                     const targetCard = cards[currentIndex + 1];
                     const targetLeft = targetCard.offsetLeft;
-                    carousel.scrollTo({ left: targetLeft, behavior: 'smooth' });
+                    const cardWidth = targetCard.offsetWidth;
+                    const carouselWidth = carousel.offsetWidth;
+                    // Ensure the card is fully visible by scrolling enough to fit it
+                    const scrollLeft = Math.max(0, targetLeft + cardWidth - carouselWidth + 20);
+                    carousel.scrollTo({ left: scrollLeft, behavior: 'smooth' });
                 }
             }
             
