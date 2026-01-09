@@ -446,15 +446,29 @@ function initCardModals() {
             modalDesc.textContent = desc;
             
             if (type === 'video') {
-                // Show video, hide image
-                modalVideo.style.display = 'block';
+                // Show YouTube iframe, hide image and old video player
                 modalImg.style.display = 'none';
-                modalVideo.querySelector('source').src = src;
-                modalVideo.load();
+                modalVideo.style.display = 'none';
+                
+                // Create or update YouTube iframe
+                let iframeContainer = document.getElementById('modal-youtube-container');
+                if (!iframeContainer) {
+                    iframeContainer = document.createElement('div');
+                    iframeContainer.id = 'modal-youtube-container';
+                    iframeContainer.style.width = '100%';
+                    iframeContainer.style.paddingBottom = '56.25%';
+                    iframeContainer.style.position = 'relative';
+                    iframeContainer.style.height = '0';
+                    modalVideo.parentNode.insertBefore(iframeContainer, modalVideo.nextSibling);
+                }
+                iframeContainer.innerHTML = `<iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/${src}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+                iframeContainer.style.display = 'block';
             } else {
                 // Show image, hide video
                 modalImg.style.display = 'block';
                 modalVideo.style.display = 'none';
+                const iframeContainer = document.getElementById('modal-youtube-container');
+                if (iframeContainer) iframeContainer.style.display = 'none';
                 modalImg.src = src;
             }
             
