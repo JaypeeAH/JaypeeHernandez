@@ -704,6 +704,23 @@ h2 {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
+#modal-youtube-container {
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    margin: 1.5rem 0;
+}
+
+#modal-youtube-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
 #modal-desc {
     margin-top: 1.5rem;
     color: var(--text-color);
