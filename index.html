@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JP Hernandez | Power Platform Developer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts & Monospace for IDE feel -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Fixed Background for Warp Effect -->
+    <canvas id="warp-background"></canvas>
+
+    <!-- Sticky Navigation -->
+    <nav class="navbar">
+        <div class="logo">JP Hernandez</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#video">Video</a></li>
+        </ul>
+        <div class="nav-cta">
+             <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+                <i class="fas fa-sun"></i>
+             </button>
+             <a href="JP Hernandez CV.pdf" target="_blank" class="btn-download"><i class="fas fa-download"></i> Download CV</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="profile-img-container">
+                <img src="assets/images/profile.png" alt="Jaypee Hernandez" class="profile-img">
+            </div>
+            <h1>Jaypee Hernandez</h1>
+            <h2>Power Platform Developer | Consultant</h2>
+            <p class="hero-text">Experience liftoff with data-driven solutions and process automation.</p>
+            <div class="hero-buttons">
+                <a href="#portfolio" class="btn-primary">View Work</a>
+                <a href="#experience" class="btn-secondary">Explore Experience</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section (Clean HTML) -->
+    <section id="experience" class="section-content">
+        <div class="container">
+            <h3 class="section-title">Work Experience</h3>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="date">Dec 2024 - Present</div>
+                    <div class="content">
+                        <h4>Cardinal Health</h4>
+                        <h5>Power Platform Developer | Consultant</h5>
+                        <ul>
+                            <li>Develop and optimize Power Platform solutions with SQL Server backend.</li>
+                            <li>Lead the Idea Incubation Team, managing project pipelines.</li>
+                            <li>Oversee end-to-end solution development from concept to deployment.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="date">Jun 2019 - Nov 2024</div>
+                    <div class="content">
+                        <h4>Willis Towers Watson</h4>
+                        <h5>Team Lead - Compliance and Automations</h5>
+                        <ul>
+                            <li>Led teams by setting clear goals and fostering professional growth.</li>
+                            <li>Automated manual processes using PowerApps, Power Automate, and Power BI.</li>
+                            <li>Developed custom applications and interactive dashboards for data-driven decisions.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="date">Jun 2016 - Jan 2019</div>
+                    <div class="content">
+                        <h4>Accenture Inc.</h4>
+                        <h5>Collections and Part-Time Tech Master</h5>
+                        <ul>
+                            <li>Managed customer receivables and debt recovery within Microsoft support.</li>
+                            <li>Created VBA and SQL reports to ensure data accuracy.</li>
+                            <li>Identified automation opportunities using OE methodology.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section-gray">
+        <div class="container">
+            <h3 class="section-title">Skills</h3>
+            <div class="skills-grid">
+                <div class="skill-circle">
+                    <div class="skill-icon"><i class="fas fa-bolt"></i></div>
+                    <span class="skill-name">Power Platform</span>
+                </div>
+                <div class="skill-circle">
+                    <div class="skill-icon"><i class="fas fa-cogs"></i></div>
+                    <span class="skill-name">Power Automate</span>
+                </div>
+                <div class="skill-circle">
+                    <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <span class="skill-name">PowerApps</span>
+                </div>
+                <div class="skill-circle">
+                    <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+                    <span class="skill-name">Power BI</span>
+                </div>
+                <div class="skill-circle">
+                    <div class="skill-icon"><i class="fas fa-database"></i></div>
+                    <span class="skill-name">SQL</span>
+                </div>
+                <div class="skill-circle">
+                    <div class="skill-icon"><i class="fas fa-project-diagram"></i></div>
+                    <span class="skill-name">Six Sigma</span>
+                </div>
+                <div class="skill-circle">
+                    <div class="skill-icon"><i class="fas fa-file-code"></i></div>
+                    <span class="skill-name">VBA</span>
+                </div>
+                <div class="skill-circle">
+                    <div class="skill-icon"><i class="fas fa-share-alt"></i></div>
+                    <span class="skill-name">SharePoint</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section-content">
+        <div class="container">
+            <h3 class="section-title">Portfolio Projects</h3>
+            <div class="carousel-wrapper">
+                <div class="carousel-inner" id="portfolio-carousel">
+                    <div class="carousel-card" data-type="image" data-src="assets/images/RAIDHome.png" data-title="RAID PowerApps Solution" data-desc="Custom canvas app for tracking risks, actions, issues, and decisions">
+                        <div class="card-image-wrapper">
+                            <img src="assets/images/RAIDHome.png" alt="RAID PowerApps Solution">
+                            <div class="play-overlay"><i class="fas fa-expand"></i></div>
+                        </div>
+                    </div>
+                    <div class="carousel-card" data-type="image" data-src="assets/images/RAIDDashboard.png" data-title="RAID Analytics Dashboard" data-desc="Interactive Power BI dashboard for real-time project insights">
+                        <div class="card-image-wrapper">
+                            <img src="assets/images/RAIDDashboard.png" alt="RAID Analytics Dashboard">
+                            <div class="play-overlay"><i class="fas fa-expand"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <div class="carousel-description" id="portfolio-description">
+                        <h4>RAID PowerApps Solution</h4>
+                        <p>Custom canvas app for tracking risks, actions, issues, and decisions</p>
+                    </div>
+                    <div class="carousel-nav-buttons">
+                        <button class="carousel-nav-btn prev-btn" data-target="portfolio-carousel"><i class="fas fa-chevron-left"></i></button>
+                        <button class="carousel-nav-btn next-btn" data-target="portfolio-carousel"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section-gray">
+        <div class="container">
+            <h3 class="section-title">Certifications</h3>
+            <div class="carousel-wrapper">
+                <div class="carousel-inner" id="cert-carousel">
+                    <div class="carousel-card" data-type="image" data-src="assets/images/PL500.png" data-title="Microsoft Power Automate" data-desc="PL-500: Power Automate RPA Developer">
+                        <div class="card-image-wrapper">
+                            <img src="assets/images/PL500.png" alt="Power Automate Certification">
+                            <div class="play-overlay"><i class="fas fa-expand"></i></div>
+                        </div>
+                    </div>
+                    <div class="carousel-card" data-type="image" data-src="assets/images/PL300.png" data-title="Microsoft Power BI" data-desc="PL-300: Power BI Data Analyst">
+                        <div class="card-image-wrapper">
+                            <img src="assets/images/PL300.png" alt="Power BI Certification">
+                            <div class="play-overlay"><i class="fas fa-expand"></i></div>
+                        </div>
+                    </div>
+                    <div class="carousel-card" data-type="image" data-src="assets/images/Certification Six Sigma.png" data-title="Six Sigma Green Belt" data-desc="Process improvement and quality management">
+                        <div class="card-image-wrapper">
+                            <img src="assets/images/Certification Six Sigma.png" alt="Six Sigma Certification">
+                            <div class="play-overlay"><i class="fas fa-expand"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <div class="carousel-description" id="cert-description">
+                        <h4>Microsoft Power Automate</h4>
+                        <p>PL-500: Power Automate RPA Developer</p>
+                    </div>
+                    <div class="carousel-nav-buttons">
+                        <button class="carousel-nav-btn prev-btn" data-target="cert-carousel"><i class="fas fa-chevron-left"></i></button>
+                        <button class="carousel-nav-btn next-btn" data-target="cert-carousel"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video" class="section-content">
+        <div class="container">
+            <h3 class="section-title">Featured Projects</h3>
+            <div class="carousel-wrapper">
+                <div class="carousel-inner" id="video-carousel">
+                    <div class="carousel-card video-card" data-type="video" data-src="assets/videos/Compass.mp4" data-title="Compass Application" data-desc="Task management application built with Power Apps for supervisors">
+                        <div class="card-image-wrapper">
+                            <video>
+                                <source src="assets/videos/Compass.mp4" type="video/mp4">
+                            </video>
+                            <div class="play-overlay"><i class="fas fa-play"></i></div>
+                        </div>
+                    </div>
+                    <div class="carousel-card video-card" data-type="video" data-src="assets/videos/ProjectManagement.mp4" data-title="Project Management System" data-desc="Sample project management application built with .NET MVC framework">
+                        <div class="card-image-wrapper">
+                            <video>
+                                <source src="assets/videos/ProjectManagement.mp4" type="video/mp4">
+                            </video>
+                            <div class="play-overlay"><i class="fas fa-play"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <div class="carousel-description" id="video-description">
+                        <h4>Compass Application</h4>
+                        <p>Task management application built with Power Apps for supervisors</p>
+                    </div>
+                    <div class="carousel-nav-buttons">
+                        <button class="carousel-nav-btn prev-btn" data-target="video-carousel"><i class="fas fa-chevron-left"></i></button>
+                        <button class="carousel-nav-btn next-btn" data-target="video-carousel"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 JP Hernandez.</p>
+            <div class="social-links">
+                <a href="#"><i class="fas fa-envelope"></i> jaypeeah@gmail.com</a>
+                <a href="#"><i class="fas fa-phone"></i> 0918 926 1904</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for details -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="modal-title"></h3>
+            <img id="modal-img" src="" alt="Detail" style="display: none;">
+            <video id="modal-video" controls style="display: none;">
+                <source src="" type="video/mp4">
+            </video>
+            <div id="modal-desc"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+</body>
+</html>
