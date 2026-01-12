@@ -5,7 +5,40 @@ document.addEventListener('DOMContentLoaded', () => {
     initCarousels();
     initCardModals();
     initSectionBackgrounds();
+    initMobileMenu();
 });
+
+/* =========================================
+   Mobile Menu
+   ========================================= */
+function initMobileMenu() {
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (!menuToggle) return;
+    
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+    
+    // Close menu when a link is clicked
+    const navItems = navLinks.querySelectorAll('a');
+    navItems.forEach(link => {
+        link.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.navbar')) {
+            menuToggle.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
+    });
+}
 
 /* =========================================
    Theme Management
